@@ -10,7 +10,7 @@ development:
       username: xxxxx
       password: xxxxx
       initialSize: 8
-      disable: false
+      disable: true
       removeAbandoned: true
       testWhileIdle: true
       removeAbandonedTimeout: 30
@@ -55,15 +55,15 @@ serviceframework:
   template:
     loader:
       classpath:
-        enable: true
+        enable: false
   static:
     loader:
       classpath:
-        enable: true
+        enable: false
         dir: "streamingpro/assets"
 ###############http config##################
 http:
-  port: 9002
+  port: 9007
   disable: false
   host: 0.0.0.0
   server:
