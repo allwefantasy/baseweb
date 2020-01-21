@@ -10,7 +10,7 @@ development:
       username: xxxxx
       password: xxxxx
       initialSize: 8
-      disable: true
+      disable: false
       removeAbandoned: true
       testWhileIdle: true
       removeAbandonedTimeout: 30
@@ -42,9 +42,8 @@ production:
 
 
 application:
-  controller: xxxxxxxxxxxxxxx
-  model:      xxxx
-  test:       xxxx
+  controller: tech.mlsql.serviceframework.platform.controller
+  model: serviceframework.platform.model
   static:
     enable: true
   template:
