@@ -42,7 +42,7 @@ production:
 
 
 application:
-  controller: tech.mlsql.serviceframework.platform.controller
+  controller: tech.mlsql.serviceframework.platform.action
   model: serviceframework.platform.model
   static:
     enable: true
