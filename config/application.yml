@@ -10,7 +10,7 @@ development:
       username: xxxxx
       password: xxxxx
       initialSize: 8
-      disable: false
+      disable: true
       removeAbandoned: true
       testWhileIdle: true
       removeAbandonedTimeout: 30
@@ -38,7 +38,7 @@ production:
       database: xxxxx
       username: xxxxx
       password: xxxxx
-      disable: false
+      disable: true
 
 
 application:
