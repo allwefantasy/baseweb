@@ -1,4 +1,4 @@
-package tech.mlsql.app_runtime.app
+package tech.mlsql.app_runtime.example.app
 
 import tech.mlsql.serviceframework.platform.app.{BeforeHTTPPhase, CustomApp, StartupPhase}
 

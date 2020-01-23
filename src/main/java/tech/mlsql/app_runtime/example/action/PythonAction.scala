@@ -1,4 +1,4 @@
-package tech.mlsql.app_runtime.action
+package tech.mlsql.app_runtime.example.action
 
 import tech.mlsql.serviceframework.platform.action.CustomAction
 
