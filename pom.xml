@@ -19,9 +19,16 @@
         <scala.binary.version>2.11</scala.binary.version>
         <scala.jline.version>2.11.0-M3</scala.jline.version>
         <web-platform-version>0.1.2</web-platform-version>
+        <scope>provided</scope>
     </properties>
 
     <profiles>
+        <profile>
+            <id>scope-compile</id>
+            <properties>
+                <scope>compile</scope>
+            </properties>
+        </profile>
         <profile>
             <id>scala-2.11</id>
             <properties>
@@ -116,7 +123,7 @@
             <groupId>tech.mlsql.serviceframework.baseweb</groupId>
             <artifactId>web-platform_${scala.binary.version}</artifactId>
             <version>${web-platform-version}</version>
-            <scope>provided</scope>
+            <scope>${scope}</scope>
         </dependency>
 
     </dependencies>
