@@ -6,7 +6,12 @@
 
     <groupId>tech.mlsql.serviceframework.baseweb</groupId>
     <artifactId>baseweb_2.11</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+    <modules>
+        <module>baseweb-lib</module>
+        <module>baseweb-bin</module>
+    </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
