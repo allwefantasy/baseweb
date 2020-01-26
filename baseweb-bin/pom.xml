@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>baseweb-bin</artifactId>
+    <artifactId>baseweb-bin_${scala.binary.version}</artifactId>
 
 
 </project>
