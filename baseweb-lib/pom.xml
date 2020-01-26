@@ -11,5 +11,4 @@
 
     <artifactId>baseweb-lib_${scala.binary.version}</artifactId>
 
-
 </project>
