@@ -7,3 +7,5 @@ dev/docker/*.jar
 *.iml
 release
 .sfcli/
+build/scala*
+build/zinc*
