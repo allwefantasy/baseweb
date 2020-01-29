@@ -6,7 +6,7 @@ import tech.mlsql.app_runtime.db.service.BasicDBService
 
 
 object PluginDB {
-  val plugin_name = "ar_python"
+  val plugin_name = "example"
   lazy val ctx = {
     val dbName = BasicDBService.fetch(plugin_name, DictType.INSTANCE_TO_DB)
     val dbInfo = dbName.getOrElse {
