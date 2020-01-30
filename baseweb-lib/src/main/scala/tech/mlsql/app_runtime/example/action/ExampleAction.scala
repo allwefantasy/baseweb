@@ -37,4 +37,8 @@ object ExampleActionProxy {
  */
 object ExampleService {
 
+  object Config {
+    val EXAMPLE_KEY = s"${PluginDB.plugin_name}__config__example"
+  }
+
 }
