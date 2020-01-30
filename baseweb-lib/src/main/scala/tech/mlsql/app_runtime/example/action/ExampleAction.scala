@@ -30,3 +30,11 @@ object ExampleAction {
 object ExampleActionProxy {
   lazy val proxy = new BasicActionProxy(PluginDB.plugin_name)
 }
+
+/**
+ * The other plugin can use ExampleService to operate the db which
+ * belongs to example plugin.
+ */
+object ExampleService {
+
+}
