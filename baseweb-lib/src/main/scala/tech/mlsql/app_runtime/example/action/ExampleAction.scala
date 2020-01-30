@@ -6,12 +6,15 @@ import tech.mlsql.serviceframework.platform.action.CustomAction
 import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
 
 /**
- * 21/1/2020 WilliamZhu(allwefantasy@gmail.com)
+ * Action logical
  */
 class ExampleAction extends CustomAction {
   override def run(params: Map[String, String]): String = ???
 }
 
+/**
+ * Action Info
+ */
 object ExampleAction {
   def action = "example"
 
@@ -19,6 +22,11 @@ object ExampleAction {
     classOf[ExampleAction].getName, PluginType.action, None)
 }
 
+/**
+ * The other plugin can use ExampleActionProxy.proxy to call action based on
+ * rest. For example:
+ * val res = ExampleActionProxy.proxy.run(ExampleAction.action,Map())
+ */
 object ExampleActionProxy {
   lazy val proxy = new BasicActionProxy(PluginDB.plugin_name)
 }
