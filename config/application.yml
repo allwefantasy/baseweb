@@ -59,7 +59,7 @@ serviceframework:
     loader:
       classpath:
         enable: false
-        dir: "streamingpro/assets"
+        dir: "assets"
 ###############http config##################
 http:
   port: 9007
