@@ -9,3 +9,6 @@ release
 .sfcli/
 build/scala*
 build/zinc*
+web_console/build
+web_console/node_modules
+package-lock.json
