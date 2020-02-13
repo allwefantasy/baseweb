@@ -1,6 +1,7 @@
 import Backend from './backend/Backend'
 import RemoteAction from './RemoteAction'
-import {Method} from './backend/RestConst'
+import {Method,Status,} from './backend/RestConst'
+
 export class ActionProxy {
     constructor(){
         this.backend = new Backend()        
