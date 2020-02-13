@@ -1,5 +1,5 @@
 import React from 'react'
-import {Action,Method,Backend} from '@allwefantasy/web-platform-ui'
+import {ActionProxy} from '../service/ActionProxy'
 
 
 export default class Hello extends React.Component{
@@ -9,11 +9,10 @@ export default class Hello extends React.Component{
         this.state = {}
     }
         
-    componentDidMount(){
-       const backend = new Backend()       
-       backend.request(Action.HELLO,Method.GET,{},(s)=>{           
-           this.setState({hello:s.msg})
-       },(s)=>{})
+    async componentDidMount(){
+       const proxy = new ActionProxy()
+       const resp = await proxy.hello()
+       this.setState({hello:resp.content.msg})       
     }
 
     render(){

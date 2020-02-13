@@ -1,17 +1,16 @@
-import {Backend,Method} from '@allwefantasy/web-platform-ui'
+import Backend from './backend/Backend'
 import RemoteAction from './RemoteAction'
+import {Method} from './backend/RestConst'
 export class ActionProxy {
     constructor(){
         this.backend = new Backend()        
-    }
-    request=(action,params,success,fail)=>{
-        this.backend.request(action,Method.POST,params,success,fail) 
-    } 
-    
-    hello = (success,fail)=>{        
-       this.backend.request(RemoteAction.HELLO,Method.GET,{},success,fail)
+    }    
+    async hello(){        
+      const res = await this.backend.request(RemoteAction.HELLO,{},Method.GET)
+      return res
     }
 }
+
 export class UserActionParams {
    static USERE_NAME = "userName"   
    

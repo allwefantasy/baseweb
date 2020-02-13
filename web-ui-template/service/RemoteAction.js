@@ -1,3 +1,3 @@
 export default class RemoteAction{
-    static HELLO="hello"    
+    static HELLO = "hello_world"    
 }
