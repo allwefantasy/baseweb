@@ -1,8 +1,9 @@
 package tech.mlsql.app_runtime.example.action
 
+import tech.mlsql.app_runtime.commons.{FormParams, Input}
 import tech.mlsql.app_runtime.db.action.{BasicActionProxy, DBBaseAction}
 import tech.mlsql.app_runtime.example.PluginDB
-import tech.mlsql.serviceframework.platform.action.CustomAction
+import tech.mlsql.common.utils.serder.json.JSONTool
 import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
 
 /**
@@ -10,15 +11,24 @@ import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
  */
 class ExampleAction extends DBBaseAction {
 
-  override def _run(params: Map[String, String]): String = ???
+  override def _run(params: Map[String, String]): String = {
+    JSONTool.toJsonStr(List(Map("value" -> s"Hello ${params(ExampleAction.Params.ECHO.name)}")))
+  }
 
-  override def _help(): String = ???
+  override def _help(): String = {
+    JSONTool.toJsonStr(FormParams.toForm(ExampleAction.Params).toList.reverse)
+  }
 }
 
 /**
  * Action Info
  */
 object ExampleAction {
+
+  object Params {
+    val ECHO = Input("echo", "")
+  }
+
   def action = "example"
 
   def plugin = PluginItem(ExampleAction.action,
