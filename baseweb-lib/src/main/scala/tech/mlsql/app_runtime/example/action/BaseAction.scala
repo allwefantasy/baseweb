@@ -6,7 +6,7 @@ import tech.mlsql.serviceframework.platform.action.{ActionContext, CustomAction}
 
 abstract class BaseAction extends CustomAction {
   override def run(params: Map[String, String]): String = {
-    if (params.contains(DBBaseAction.Params.HELP.name)) {
+    if (params.contains(BaseAction.Params.HELP.name)) {
       _help()
     }
     else {
