@@ -1,6 +1,6 @@
 package tech.mlsql.app_runtime.example.action
 
-import tech.mlsql.app_runtime.db.action.BasicActionProxy
+import tech.mlsql.app_runtime.db.action.{BasicActionProxy, DBBaseAction}
 import tech.mlsql.app_runtime.example.PluginDB
 import tech.mlsql.serviceframework.platform.action.CustomAction
 import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
@@ -8,8 +8,11 @@ import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
 /**
  * Action logical
  */
-class ExampleAction extends CustomAction {
-  override def run(params: Map[String, String]): String = ???
+class ExampleAction extends DBBaseAction {
+
+  override def _run(params: Map[String, String]): String = ???
+
+  override def _help(): String = ???
 }
 
 /**
