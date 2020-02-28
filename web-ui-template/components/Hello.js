@@ -12,7 +12,7 @@ export default class Hello extends React.Component{
     async componentDidMount(){
        const proxy = new ActionProxy()
        const resp = await proxy.hello()
-       this.setState({hello:resp.content.msg})       
+       this.setState({hello:resp.content[0].msg})
     }
 
     render(){
