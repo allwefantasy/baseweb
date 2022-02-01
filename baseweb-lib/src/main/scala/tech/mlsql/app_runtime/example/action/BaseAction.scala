@@ -1,8 +1,8 @@
 package tech.mlsql.app_runtime.example.action
 
-import tech.mlsql.app_runtime.commons.Input
 import tech.mlsql.common.utils.serder.json.JSONTool
 import tech.mlsql.serviceframework.platform.action.{ActionContext, CustomAction}
+import tech.mlsql.serviceframework.platform.form.Input
 
 abstract class BaseAction extends CustomAction {
   override def run(params: Map[String, String]): String = {

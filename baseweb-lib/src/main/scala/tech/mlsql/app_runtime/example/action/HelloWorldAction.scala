@@ -1,7 +1,7 @@
 package tech.mlsql.app_runtime.example.action
 
-import tech.mlsql.app_runtime.commons.FormParams
 import tech.mlsql.common.utils.serder.json.JSONTool
+import tech.mlsql.serviceframework.platform.form.FormParams
 import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
 
 

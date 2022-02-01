@@ -1,9 +1,9 @@
 package tech.mlsql.app_runtime.example.action
 
-import tech.mlsql.app_runtime.commons.{FormParams, Input}
-import tech.mlsql.app_runtime.db.action.{BasicActionProxy}
+import tech.mlsql.app_runtime.db.action.BasicActionProxy
 import tech.mlsql.app_runtime.example.PluginDB
 import tech.mlsql.common.utils.serder.json.JSONTool
+import tech.mlsql.serviceframework.platform.form.{FormParams, Input}
 import tech.mlsql.serviceframework.platform.{PluginItem, PluginType}
 
 /**
