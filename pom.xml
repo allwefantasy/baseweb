@@ -18,8 +18,6 @@
         <scala.version>2.11.8</scala.version>
         <scala.binary.version>2.11</scala.binary.version>
         <scala.jline.version>2.11.0-M3</scala.jline.version>
-        <web-platform-version>0.2.0</web-platform-version>
-        <app_runtime_with_db.version>1.0.1</app_runtime_with_db.version>
     </properties>
 
     <profiles>
@@ -81,13 +79,8 @@
     <dependencies>
         <dependency>
             <groupId>tech.mlsql.serviceframework.baseweb</groupId>
-            <artifactId>web-platform_${scala.binary.version}</artifactId>
-            <version>${web-platform-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>tech.mlsql.serviceframework.baseweb</groupId>
-            <artifactId>app_runtime_with_db-lib_${scala.binary.version}</artifactId>
-            <version>${app_runtime_with_db.version}</version>
+            <artifactId>ar_runtime_web_console-lib_${scala.binary.version}</artifactId>
+            <version>1.0.3</version>
         </dependency>
 
     </dependencies>
