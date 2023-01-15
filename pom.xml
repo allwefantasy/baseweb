@@ -80,7 +80,7 @@
         <dependency>
             <groupId>tech.mlsql.serviceframework.baseweb</groupId>
             <artifactId>ar_runtime_web_console-lib_${scala.binary.version}</artifactId>
-            <version>1.0.3</version>
+            <version>1.0.4.2</version>
         </dependency>
 
     </dependencies>
