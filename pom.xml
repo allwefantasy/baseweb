@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>tech.mlsql.serviceframework.baseweb</groupId>
-    <artifactId>baseweb_2.11</artifactId>
+    <artifactId>baseweb_2.12</artifactId>
     <packaging>pom</packaging>
     <version>1.0.0</version>
     <modules>
@@ -13,11 +13,10 @@
         <module>baseweb-bin</module>
     </modules>
 
-    <properties>
+   <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.11.8</scala.version>
-        <scala.binary.version>2.11</scala.binary.version>
-        <scala.jline.version>2.11.0-M3</scala.jline.version>
+        <scala.version>2.12.10</scala.version>
+        <scala.binary.version>2.12</scala.binary.version>
     </properties>
 
     <profiles>
@@ -76,13 +75,24 @@
 
     </profiles>
 
-    <dependencies>
+       <dependencies>
         <dependency>
             <groupId>tech.mlsql.serviceframework.baseweb</groupId>
             <artifactId>ar_runtime_web_console-lib_${scala.binary.version}</artifactId>
             <version>1.0.4.2</version>
-        </dependency>
 
+            <exclusions>
+                <exclusion>
+                    <groupId>mysql</groupId>
+                    <artifactId>mysql-connector-java</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.45</version>
+        </dependency>
     </dependencies>
 
     <build>
